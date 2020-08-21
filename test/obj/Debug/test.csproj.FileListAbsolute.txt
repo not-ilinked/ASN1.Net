@@ -1,0 +1,9 @@
+C:\Users\ilink\source\repos\ASN1.Net\test\bin\Debug\test.exe.config
+C:\Users\ilink\source\repos\ASN1.Net\test\bin\Debug\test.exe
+C:\Users\ilink\source\repos\ASN1.Net\test\bin\Debug\test.pdb
+C:\Users\ilink\source\repos\ASN1.Net\test\bin\Debug\ASN1.Net.dll
+C:\Users\ilink\source\repos\ASN1.Net\test\bin\Debug\ASN1.Net.pdb
+C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.exe
+C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.pdb
