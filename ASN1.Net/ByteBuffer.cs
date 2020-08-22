@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ASN1
 {
     public class ByteBuffer
     {
         private byte[] _buffer;
-        private int _offset;
+        public int Offset { get; private set; }
 
         public ByteBuffer(byte[] buffer)
         {
@@ -19,15 +15,15 @@ namespace ASN1
         public byte[] ReadBytes(int count)
         {
             byte[] subBuffer = new byte[count];
-            Buffer.BlockCopy(_buffer, _offset, subBuffer, 0, count);
-            _offset += count;
+            Buffer.BlockCopy(_buffer, Offset, subBuffer, 0, count);
+            Offset += count;
             return subBuffer;
         }
 
         public byte ReadByte()
         {
-            byte b = _buffer[_offset];
-            _offset++;
+            byte b = _buffer[Offset];
+            Offset++;
             return b;
         }
     }

@@ -3,3 +3,9 @@ C:\Users\ilink\source\repos\ASN1.Net\ASN1.Net\bin\Debug\ASN1.Net.pdb
 C:\Users\ilink\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.csprojAssemblyReference.cache
 C:\Users\ilink\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.dll
 C:\Users\ilink\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.pdb
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.csprojAssemblyReference.cache
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.csproj.CoreCompileInputs.cache
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.dll
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\obj\Debug\ASN1.Net.pdb
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\bin\Debug\ASN1.Net.dll
+C:\Users\edhbu\source\repos\ASN1.Net\ASN1.Net\bin\Debug\ASN1.Net.pdb

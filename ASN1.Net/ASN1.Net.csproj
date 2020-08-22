@@ -41,13 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ASN1.cs" />
-    <Compile Include="ASN1Object.cs" />
-    <Compile Include="ASN1ObjectType.cs" />
-    <Compile Include="ASN1PrimitiveObject.cs" />
-    <Compile Include="ASN1StructuredObject.cs" />
+    <Compile Include="ASN1Deserializer.cs" />
+    <Compile Include="Objects\ASN1BitString.cs" />
+    <Compile Include="Objects\ASN1Object.cs" />
+    <Compile Include="Objects\ASN1ObjectType.cs" />
+    <Compile Include="Objects\ASN1PrimitiveObject.cs" />
+    <Compile Include="Objects\ASN1StructuredObject.cs" />
     <Compile Include="ByteBuffer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\UniversalTagType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

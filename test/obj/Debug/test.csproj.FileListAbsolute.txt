@@ -7,3 +7,13 @@ C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.csprojAssemblyReference
 C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.csproj.CopyComplete
 C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.exe
 C:\Users\ilink\source\repos\ASN1.Net\test\obj\Debug\test.pdb
+C:\Users\edhbu\source\repos\ASN1.Net\test\bin\Debug\test.exe.config
+C:\Users\edhbu\source\repos\ASN1.Net\test\bin\Debug\test.exe
+C:\Users\edhbu\source\repos\ASN1.Net\test\bin\Debug\test.pdb
+C:\Users\edhbu\source\repos\ASN1.Net\test\bin\Debug\ASN1.Net.dll
+C:\Users\edhbu\source\repos\ASN1.Net\test\bin\Debug\ASN1.Net.pdb
+C:\Users\edhbu\source\repos\ASN1.Net\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\edhbu\source\repos\ASN1.Net\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\edhbu\source\repos\ASN1.Net\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\edhbu\source\repos\ASN1.Net\test\obj\Debug\test.exe
+C:\Users\edhbu\source\repos\ASN1.Net\test\obj\Debug\test.pdb
