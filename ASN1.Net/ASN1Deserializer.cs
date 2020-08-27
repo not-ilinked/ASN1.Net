@@ -56,14 +56,28 @@ namespace ASN1
 
             const int lenCap = 128;
 
-            if (len == lenCap)
-                throw new NotImplementedException("The deserializer does currently not have an implementation for unknown lengths");
+            if (len == lenCap) // unknown length
+            {
+                int originalOffset = buffer.Offset;
+
+                int zerosEncountered = 0;
+                while (zerosEncountered < 2)
+                {
+                    if (buffer.ReadByte() == 0)
+                        zerosEncountered++;
+                    else
+                        zerosEncountered = 0;
+                }
+
+                len = buffer.Offset - originalOffset - 2;
+                buffer.Offset = originalOffset;
+            }
             else if (len > lenCap)
             {
                 int extraBytes = len - lenCap;
 
                 if (extraBytes > sizeof(int))
-                    throw new NotImplementedException("The deserializer can currently only handle length byte amounts up to 4");
+                    throw new NotImplementedException("The deserializer can currently only handle length byte amounts up to " + sizeof(int));
 
                 byte[] withPadding = new byte[sizeof(int)];
 

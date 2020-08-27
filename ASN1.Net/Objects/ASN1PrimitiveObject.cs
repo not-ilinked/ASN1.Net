@@ -14,6 +14,7 @@
             RawValue = value;
         }
 
+        // for universal types that require special handling
         protected ASN1PrimitiveObject(int cls, int tag) : this(cls, tag, null)
         { }
     }

@@ -6,7 +6,7 @@ namespace ASN1
     public class ASN1BitString : ASN1PrimitiveObject
     {
         public byte UnusedBits { get; private set; }
-        private byte[] _string;
+        private readonly byte[] _string;
 
         public override byte[] GetValue()
         {
