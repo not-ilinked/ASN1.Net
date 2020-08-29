@@ -13,7 +13,7 @@ namespace ASN1
             return _string;
         }
 
-        public ASN1BitString(byte[] value) : base(0, (int)UniversalTagType.BitString)
+        public ASN1BitString(byte[] value) : base(0, (int)UniversalTag.BitString)
         {
             RawValue = value;
 

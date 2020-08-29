@@ -2,7 +2,7 @@
 
 namespace ASN1
 {
-    public class ASN1Object
+    public abstract class ASN1Object
     {
         public int Class { get; private set; }
         public int Tag { get; private set; }
@@ -23,12 +23,19 @@ namespace ASN1
             Tag = tag;
         }
 
-        public UniversalTagType GetUniversalTag()
+        public UniversalTag GetUniversalTag()
         {
             if (UniversalClass)
-                return (UniversalTagType)Tag;
+                return (UniversalTag)Tag;
             else
                 throw new InvalidOperationException("Class must be of type universal (0)");
         }
+
+        public T ToObject<T>()
+        {
+            return (T)ToObject(typeof(T));
+        }
+
+        public abstract object ToObject(Type type);
     }
 }

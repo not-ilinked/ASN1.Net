@@ -1,11 +1,11 @@
 ﻿namespace ASN1
 {
     // https://www.obj-sys.com/asn1tutorial/node124.html
-    public enum UniversalTagType
+    public enum UniversalTag
     {
         ReservedForBER,
-        Bool,
-        Int,
+        Boolean,
+        Integer,
         BitString,
         OctetString,
         Null,

@@ -18,38 +18,6 @@ namespace ASN1
             return bytes[0];
         }
 
-
-        private static List<ASN1Object> Deserialize(ByteBuffer buffer, int count)
-        {
-            List<ASN1Object> objects = new List<ASN1Object>();
-            int endAt = buffer.Offset + count;
-
-            while (buffer.Offset < endAt)
-            {
-                BitArray flags = new BitArray(new byte[] { buffer.ReadByte() });
-
-                byte tag = ExtractBits(flags, 0, 5);
-                ASN1ObjectType type = (ASN1ObjectType)ExtractBits(flags, 5, 1);
-                byte @class = ExtractBits(flags, 6, 1);
-                int contentLength = GetContentLengh(buffer);
-
-                if (type == ASN1ObjectType.Primitive)
-                {
-                    byte[] contents = buffer.ReadBytes(contentLength);
-
-                    if (@class == 0 && (UniversalTagType)tag == UniversalTagType.BitString)
-                        objects.Add(new ASN1BitString(contents));
-                    else
-                        objects.Add(new ASN1PrimitiveObject(@class, tag, contents));
-                }
-                else
-                    objects.Add(new ASN1StructuredObject(Deserialize(buffer, contentLength), @class, tag));
-            }
-
-            return objects;
-        }
-
-
         private static int GetContentLengh(ByteBuffer buffer)
         {
             int len = buffer.ReadByte();
@@ -88,6 +56,36 @@ namespace ASN1
             }
 
             return len;
+        }
+
+        private static List<ASN1Object> Deserialize(ByteBuffer buffer, int count)
+        {
+            List<ASN1Object> objects = new List<ASN1Object>();
+            int endAt = buffer.Offset + count;
+
+            while (buffer.Offset < endAt)
+            {
+                BitArray flags = new BitArray(new byte[] { buffer.ReadByte() });
+
+                byte tag = ExtractBits(flags, 0, 5);
+                ASN1ObjectType type = (ASN1ObjectType)ExtractBits(flags, 5, 1);
+                byte @class = ExtractBits(flags, 6, 1);
+                int contentLength = GetContentLengh(buffer);
+
+                if (type == ASN1ObjectType.Primitive)
+                {
+                    byte[] contents = buffer.ReadBytes(contentLength);
+
+                    if (@class == 0 && (UniversalTag)tag == UniversalTag.BitString)
+                        objects.Add(new ASN1BitString(contents));
+                    else
+                        objects.Add(new ASN1PrimitiveObject(@class, tag, contents));
+                }
+                else
+                    objects.Add(new ASN1StructuredObject(Deserialize(buffer, contentLength), @class, tag));
+            }
+
+            return objects;
         }
 
 
